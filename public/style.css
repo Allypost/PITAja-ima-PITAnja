@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+
 form.podloga.top-buffer {
     margin-top: 5px;
 }
@@ -24,7 +26,7 @@ form.podloga {
 }
 
 textarea {
-    font-family: "Buxton Sketch";
+    font-family: "Buxton Sketch", 'Gloria Hallelujah', sans-serif;
     font-size: 23px;
     color: green;
     width: 325px;
@@ -37,8 +39,6 @@ div.ex1 {
     margin: auto;
     background-color: white;
     border: 1px solid #000000;
-
-
 }
 
 .vcenter {
