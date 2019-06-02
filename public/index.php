@@ -21,94 +21,83 @@ $baseUrl = getenv('BASE_URL') ?? '';
         <link href="<?= $baseUrl ?>/style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="myNav" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><img id="nav-img" src="" alt="Picture trivia"></div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="nav-img" src="" alt="Picture trivia">
+        </div>
         <div id="background">
             <img src="<?= $baseUrl ?>/pozadina.gif" class="stretch" alt="" />
         </div>
         <div class="container-fluid">
-
             <div class="row top-buffer">
-                <div align="center" class="col-md-8 col-md-offset-2">
-                    <form width="40%" class="podloga">
-                        <div class="row top-buffer">
-                            <div class="col-md-12">
-                                <img alt="Trivia" height="100" src="<?= $baseUrl ?>/trivia.png">
+                <div class="col-md-8 col-md-offset-2 podloga">
+                    <div class="row">
+                        <form class="col-md-8 col-md-offset-2">
+                            <div class="row top-buffer">
+                                <div class="col-md-12">
+                                    <img alt="Trivia" height="100" src="<?= $baseUrl ?>/trivia.png">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row top-buffer">
-                            <div class="col-md-12">
-                                <img alt="Answers" height="150" src="<?= $baseUrl ?>/answers.png">
-                                <div>
-                                    <div>
-                                        <div class="row top-buffer">
-                                            <div class="col-md-12">
-                                                <a href="https://finalbastion.com/" target="_blank"><img alt="Final Bastion" src="<?= $baseUrl ?>/HouseofWilliam.png" target="_blank" height="40"
-                                                                                                         style="margin-bottom: 20px;"></a>
-                                            </div>
-                                            <label for="selectBox">Picture Trivia: </label>
-                                            <select id="selectBox" onchange="changeFunc(value)">
-                                                <option selected>--Please choose a Trivia--</option>
-                                                <option value="dog-breeds">Dog Breeds</option>
-                                                <option value="famous-landmarks">Famous Landmarks</option>
-                                                <option value="state-flags">State Flags</option>
-                                                <option value="famous-art">Famous Art</option>
-                                                <option value="geometric-shapes">Geometric Shapes</option>
-                                                <option value="bird-types">Bird Types</option>
-                                                <option value="advanced-spelling">Advanced spelling</option>
-                                            </select>
-                                        </div>
-                                        <div class="row top-buffer">
-                                            <div class="col-md-12">
-                                                <!-- <input type="search" name="q" placeholder="wizbangquestiongold.gif" autocomplete="off" onkeyup="showResult(this.value)"> -->
-                                                <input type="text" placeholder='Find your trivia question here, click the button "Answer"...' size="40" onkeyup="showResult(this.value)"
-                                                       style="font-size:23px;width: 700px; font-family:'Buxton Sketch'">
-                                                <img src="<?= $baseUrl ?>/wizbangquestiongold.gif" onclick="poruka1()" style="margin-bottom: 10px;">
-                                                <div>
-                                                    <div>
-                                                        <div class="row top-buffer">
-                                                            <div class="col-md-12">
-                                                                <div id="livesearch" style="background-color:white;max-width: 800px"></div>
-                                                                <div>
-                                                                    <div>
-                                                                        <div class="row top-buffer" align="center">
-                                                                            <div class="col-md-1 vcenter">
-                                                                                <img src="<?= $baseUrl ?>/QuestSpiralexclamation.gif" onclick="poruka2()">
-                                                                            </div>
-                                                                            <div class="col-md-5 vcenter">
-                                                                                <textarea id="rjesenje" readonly placeholder="...and the answer will appear here!"></textarea>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row top-buffer">
-                                                                            <div class="col-md-12">
-
-                                                                                <div>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <img src="<?= $baseUrl ?>/dodle.png" onclick="poruka3()">
-                                                                                    <p></p>
-                                                                                    <p> ~ Copyright &copy; <?= date("Y") ?> of FinalBastion.com & WilliamTheHouseOwner ~ </p>
-                                                                                    <div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-12">
+                                    <img alt="Answers" height="150" src="<?= $baseUrl ?>/answers.png">
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-12">
+                                    <a href="https://finalbastion.com/" target="_blank"><img alt="Final Bastion" height="40" src="<?= $baseUrl ?>/HouseofWilliam.png"></a>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-12">
+                                    <label for="selectBox">Picture Trivia: </label>
+                                    <select id="selectBox" onchange="openTriviaImage(value)">
+                                        <option value="" selected>--Please choose a Trivia--</option>
+                                        <option value="dog-breeds">Dog Breeds</option>
+                                        <option value="famous-landmarks">Famous Landmarks</option>
+                                        <option value="state-flags">State Flags</option>
+                                        <option value="famous-art">Famous Art</option>
+                                        <option value="geometric-shapes">Geometric Shapes</option>
+                                        <option value="bird-types">Bird Types</option>
+                                        <option value="advanced-spelling">Advanced spelling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row">
+                                        <input class="col-md-9 vcenter question-input" onkeyup="showResult(this.value)" placeholder="Find your trivia question here..." type="text">
+                                        <img class="col-md-2 vcenter input-image" onclick="poruka1()" src="<?= $baseUrl ?>/wizbangquestiongold.gif">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                            <div class="row top-buffer">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row question-list"></div>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row">
+                                        <img class="col-md-2 vcenter input-image" src="<?= $baseUrl ?>/QuestSpiralexclamation.gif" onclick="poruka2()">
+                                        <div class="col-md-9 vcenter answer-box" data-placeholder="...to show the answer here!"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-12">
+                                    <div class="row top-buffer">
+                                        <img src="<?= $baseUrl ?>/dodle.png" onclick="poruka3()" alt="Mascot doodle">
+                                    </div>
+                                    <div class="row top-buffer">
+                                        <p>~ Copyright &copy; <?= date("Y") ?> of FinalBastion.com & WilliamTheHouseOwner ~</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </body>
 </html>
