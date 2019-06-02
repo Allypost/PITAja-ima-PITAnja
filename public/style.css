@@ -67,8 +67,13 @@
     color: #2e7d32;
 }
 
+.question-list .top-buffer:first-child {
+    margin-top: 0;
+}
+
 .question-list:not(:empty) {
     border: 1px solid #bdbdbd;
+    padding: .5em 1em;
     max-height: 20em;
     overflow-y: auto;
     overflow-x: hidden;

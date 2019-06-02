@@ -30,26 +30,26 @@ $baseUrl = getenv('BASE_URL') ?? '';
         </div>
         <div class="container-fluid">
             <div class="row top-buffer">
-                <div class="col-md-8 col-md-offset-2 podloga">
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 podloga">
                     <div class="row">
-                        <form class="col-md-8 col-md-offset-2">
+                        <form class="col-sm-8 col-sm-offset-2">
                             <div class="row top-buffer">
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <img alt="Trivia" height="100" src="<?= $baseUrl ?>/trivia.png">
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <img alt="Answers" height="150" src="<?= $baseUrl ?>/answers.png">
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <a href="https://finalbastion.com/" target="_blank"><img alt="Final Bastion" height="40" src="<?= $baseUrl ?>/HouseofWilliam.png"></a>
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <label for="selectBox">Picture Trivia: </label>
                                     <select id="selectBox" onchange="openTriviaImage(value)">
                                         <option value="" selected>--Please choose a Trivia--</option>
@@ -64,28 +64,28 @@ $baseUrl = getenv('BASE_URL') ?? '';
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-8 col-md-offset-2">
+                                <div class="col-sm-8 col-sm-offset-2">
                                     <div class="row">
-                                        <input class="col-md-9 vcenter question-input" onkeyup="showResult(this.value)" placeholder="Find your trivia question here..." type="text">
-                                        <img class="col-md-2 vcenter input-image" onclick="poruka1()" src="<?= $baseUrl ?>/wizbangquestiongold.gif">
+                                        <input class="col-xs-8 vcenter question-input" onkeyup="showResult(this.value)" placeholder="Find your trivia question here..." type="text">
+                                        <img class="col-xs-2 vcenter input-image" onclick="poruka1()" src="<?= $baseUrl ?>/wizbangquestiongold.gif">
                                     </div>
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-8 col-md-offset-2">
+                                <div class="col-sm-8 col-sm-offset-2">
                                     <div class="row question-list"></div>
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-8 col-md-offset-2">
+                                <div class="col-sm-8 col-sm-offset-2">
                                     <div class="row">
-                                        <img class="col-md-2 vcenter input-image" src="<?= $baseUrl ?>/QuestSpiralexclamation.gif" onclick="poruka2()">
-                                        <div class="col-md-9 vcenter answer-box" data-placeholder="...to show the answer here!"></div>
+                                        <img class="col-sm-2 vcenter input-image" src="<?= $baseUrl ?>/QuestSpiralexclamation.gif" onclick="poruka2()">
+                                        <div class="col-sm-8 vcenter answer-box" data-placeholder="...to show the answer here!"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row top-buffer">
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <div class="row top-buffer">
                                         <img src="<?= $baseUrl ?>/dodle.png" onclick="poruka3()" alt="Mascot doodle">
                                     </div>
