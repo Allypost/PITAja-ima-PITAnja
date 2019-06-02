@@ -1,5 +1,5 @@
 <?php
-$q = $_GET["q"];
+$q = (string)$_GET["q"] ?? '';
 
 $results = [];
 
