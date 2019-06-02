@@ -23,10 +23,11 @@
         answers[ answerNumber ] = result.answer;
 
         var $question = document.createElement('div');
-        $question.className = 'col-md-10';
+        $question.className = 'col-md-10 question';
         $question.innerText = result.question;
 
         var $answerButton = document.createElement('button');
+        $answerButton.className = 'answer-button';
         $answerButton.innerText = 'Answer';
         $answerButton.onclick = function(event) {
             showAnswer(event, answerNumber);
