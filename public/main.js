@@ -40,6 +40,9 @@ function poruka3() {
 }
 
 function changeFunc(imageName) {
+    if (imageName.trim().length === 0)
+        return;
+
     var $nav = document.getElementById('myNav');
     $nav.style.width = '100%';
 
