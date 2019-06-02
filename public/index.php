@@ -16,11 +16,12 @@ $baseUrl = getenv('BASE_URL') ?? '';
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
               rel="stylesheet">
 
+        <script>var baseUrl =<?= json_encode($baseUrl) ?></script>
         <script src="<?= $baseUrl ?>/main.js"></script>
         <link href="<?= $baseUrl ?>/style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="myNav" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+        <div id="myNav" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><img id="nav-img" src="" alt="Picture trivia"></div>
         <div id="background">
             <img src="<?= $baseUrl ?>/pozadina.gif" class="stretch" alt="" />
         </div>
@@ -46,14 +47,14 @@ $baseUrl = getenv('BASE_URL') ?? '';
                                             </div>
                                             <label for="selectBox">Picture Trivia: </label>
                                             <select id="selectBox" onchange="changeFunc(value)">
-                                                <option value="">--Please choose a Trivia--</option>
-                                                <option value="1">Dog Breeds</option>
-                                                <option value="2">Famous Landmarks</option>
-                                                <option value="3">State Flags</option>
-                                                <option value="4">Famous Art</option>
-                                                <option value="5">Geometric Shapes</option>
-                                                <option value="6">Bird Types</option>
-                                                <option value="7">Advanced spelling</option>
+                                                <option selected>--Please choose a Trivia--</option>
+                                                <option value="dog-breeds">Dog Breeds</option>
+                                                <option value="famous-landmarks">Famous Landmarks</option>
+                                                <option value="state-flags">State Flags</option>
+                                                <option value="famous-art">Famous Art</option>
+                                                <option value="geometric-shapes">Geometric Shapes</option>
+                                                <option value="bird-types">Bird Types</option>
+                                                <option value="advanced-spelling">Advanced spelling</option>
                                             </select>
                                         </div>
                                         <div class="row top-buffer">
