@@ -1,6 +1,6 @@
 <?php
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("links.xml");
+$xmlDoc->load("../links.xml");
 
 $x = $xmlDoc->getElementsByTagName('link');
 
@@ -8,7 +8,7 @@ $x = $xmlDoc->getElementsByTagName('link');
 $q = $_GET["q"];
 
 $niz = [];
-$myfile = fopen("pitanja.txt", "r") or die("Unable to open file!");
+$myfile = fopen("../pitanja.txt", "r") or die("Unable to open file!");
 while (!feof($myfile)) {
     $pitanje = fgets($myfile);
     $odgovor = fgets($myfile);
